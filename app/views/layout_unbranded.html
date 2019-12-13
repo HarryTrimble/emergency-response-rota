@@ -16,7 +16,9 @@
   <link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css">
 {% endblock %}
 
-{% block header %}{% endblock %}
+{% block header %}
+  {% include "includes/header.html" %}
+{% endblock %}
 {% block footer %}{% endblock %}
 
 {% block bodyEnd %}
