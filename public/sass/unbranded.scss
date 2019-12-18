@@ -140,21 +140,17 @@ input[type=submit] {
   color: #ffffff; 
 } 
 
+/* mobile */
 @media (max-width: 740px) {
     #redcross-logo {
       width: 40%;
     }
-    #menu-desktop {
-    display: none;
-    }
 }
 
+/* desktop */
 @media (min-width: 741px) {
     #redcross-logo {
-      width: 80%;
-    }
-    #menu-mobile {
-    display: none;
+      width: 60%;
     }
 }
 
