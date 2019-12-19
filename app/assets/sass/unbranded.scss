@@ -73,14 +73,10 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 // HARRY'S NEW CODE
 
+.button str
+
 @media (max-width: 800px) {
     #hidden-element-on-model {
-        display: none;
-    }
-    .bin {
-        padding: 0;
-    }
-    .bin br {
         display: none;
     }
 }
