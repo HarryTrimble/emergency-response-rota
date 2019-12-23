@@ -14,13 +14,13 @@
         </h4>
 
         <div id="panel-disappear" class="govuk-panel govuk-panel--confirmation" style="background-color: #AD1220;">
-            <span class="govuk-caption-m" style="color: #fff;">Live emergency</span>
-            <h2 class="govuk-heading-m" style="color: #fff;">Wellport flooding
+            <span class="govuk-caption-m" style="color: #fff;">{% include "includes/emergency-caption.html" %}</span>
+            <h2 class="govuk-heading-m" style="color: #fff;">{% include "includes/emergency-name.html" %}
             </h3>
-            <p class="govuk-body" style="margin-bottom: 0px; color: #fff;">There has been flooding in Wellport. Volunteers needed to assist at rest centres and answer support line calls</p>
+            <p class="govuk-body" style="margin-bottom: 0px; color: #fff;">{% include "includes/emergency-call-out.html" %}</p>
             <br>
 
-            <button style="margin-bottom: 0px; color: #AD1220; background-color: #fff;" class="govuk-button" data-module="govuk-button">I might be available to help</button>
+            <a style="margin-bottom: 0px; color: #AD1220; background-color: #fff;" class="govuk-button" data-module="govuk-button" href="/live-emergency/choose-availability">I might be available to help</a>
             <br><br>
             <button onclick="myFunction()" style="margin-bottom: 0px; color: #AD1220; background-color: #fff;" class="govuk-button" data-module="govuk-button">I'm not available</button>
         </div>

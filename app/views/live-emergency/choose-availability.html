@@ -1,0 +1,341 @@
+  {% extends "layout_signed_in.html" %}
+
+  {% block pageTitle %}
+    Home - new rota
+  {% endblock %}
+
+  {% block beforeContent %}
+    <a class="govuk-back-link" href="/live-emergency/home">Back</a>
+  {% endblock %}
+
+  {% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-l">
+          When are you available to help?
+        </h2>
+
+        {% include "includes/live-emergency-panel.html" %}
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+          {% include "includes/live-emergency-panel.html" %}
+          <p class="govuk-body" style="margin-bottom: 0px;">{% include "includes/emergency-call-out.html" %}</p>
+        </div>
+
+        <br>
+
+        <form class="form" action="/live-emergency/preview-availability" method="post">
+
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <!-- Leisure Centre -->
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span id="accordion-link" class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Leisure Centre
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                <span class="govuk-caption-m">Address</span>
+                <p class="govuk-body">
+                23 Station Road, Wellport, WP9 4RL</p>
+
+                <span class="govuk-caption-m">Help needed</span>
+                <p class="govuk-body">{% include "includes/emergency-centre-description.html" %}</p>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Sat 15 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Saturday</span> 15 Feb  (today)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Sun 16 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 16 Feb  (tomorrow)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Mon 17 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Monday</span> 17 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Tue 18 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 18 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Wed 19 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Wednesday</span> 19 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Thu 20 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 20 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Fri 21 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Friday</span> 21 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- Meadow Street Mosque -->
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span id="accordion-link" class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Meadow Street Mosque
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                <span class="govuk-caption-m">Address</span>
+                <p class="govuk-body">
+                48 Meadow Street, Wellport, WP8 8PL</p>
+
+                <span class="govuk-caption-m">Help needed</span>
+                <p class="govuk-body">{% include "includes/emergency-centre-description.html" %}</p>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Sat 15 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Saturday</span> 15 Feb  (today)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Sun 16 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 16 Feb  (tomorrow)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Mon 17 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Monday</span> 17 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Tue 18 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 18 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Wed 19 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Wednesday</span> 19 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Thu 20 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 20 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="mosque" type="checkbox" value="Fri 21 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Friday</span> 21 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- Wellport Civic Centre -->
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span id="accordion-link" class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Wellport Civic Centre
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                <span class="govuk-caption-m">Address</span>
+                <p class="govuk-body">
+                8 High Road, Wellport, WP1 7XH</p>
+
+                <span class="govuk-caption-m">Help needed</span>
+                <p class="govuk-body">{% include "includes/emergency-centre-description.html" %}</p>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Sat 15 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Saturday</span> 15 Feb  (today)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Sun 16 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 16 Feb  (tomorrow)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Mon 17 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Monday</span> 17 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Tue 18 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 18 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Wed 19 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Wednesday</span> 19 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Thu 20 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 20 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Fri 21 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Friday</span> 21 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- Phone support line -->
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span id="accordion-link" class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Phone support line
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                <span class="govuk-caption-m">Address</span>
+                <p class="govuk-body">
+                 British Red Cross, Coronation Close, Norwich, NR6 5HD</p>
+
+                <span class="govuk-caption-m">Help needed</span>
+                <p class="govuk-body">{% include "includes/emergency-support-line-description.html" %}</p>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Sat 15 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Saturday</span> 15 Feb  (today)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Sun 16 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 16 Feb  (tomorrow)<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Mon 17 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Monday</span> 17 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Tue 18 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 18 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Wed 19 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Wednesday</span> 19 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="civic-centre" type="checkbox" value="Thu 20 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 20 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="leisure-centre" type="checkbox" value="Fri 21 Feb">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Friday</span> 21 Feb<br>
+                          <a href="#" class="govuk-link govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button id="red-button" class="govuk-button" data-module="govuk-button">Preview your availability</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  {% endblock %}
