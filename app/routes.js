@@ -28,4 +28,26 @@ router.post('/sign-in-2fa', function (req, res) {
 
 });
 
+// sent new on-call rota prompt
+router.post('/on-call-rota/confirm-prompt-text-message', function (req, res) {
+
+  notify.sendSms(
+    // this long string is the template ID, copy it from the template
+    // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+    // in your code.
+    'e4cd3e4a-dbda-4adb-aa57-ef9d723cc59a',
+    // `emailAddress` here needs to match the name of the form field in
+    // your HTML page
+    req.body.phoneNumber//'personalisation': {
+    //'first-name': req.session.data['first-name']
+//}
+  );
+
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/on-call-rota/confirm-prompt-text-message');
+
+});
+
+
 module.exports = router

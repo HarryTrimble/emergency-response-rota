@@ -1,0 +1,30 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Confirmed: text sent
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #05853A;">
+        <h1 class="govuk-panel__title">Text message sent</h1>
+        <div class="govuk-panel__body">
+          Mobile phone number<br><strong>{{ data['phoneNumber'] }}</strong>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="govuk-body">This is the text message sent:</p>
+
+      <div class="govuk-inset-text">
+        Now available: March on-call rota for Cumbria and Lancashire. Sign into Emergency Response Rota to choose your shifts. 
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
