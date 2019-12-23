@@ -56,6 +56,18 @@ $(document).on('click', '.number-spinner button', function () {
   btn.closest('.number-spinner').find('input').val(newVal);
 });
 
+// Current date for when people print web page
+$(document).on('load',function(){
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  today = mm + '/' + dd + '/' + yyyy;
+  $('#currentdate').html(today);
+});
+
+
 // autocomplete
 var names = ["Mike Adamson","Laura Basegmezer","Jo Straw","Harry Trimble","Christina Pekkola Tellez","Laura Turner","Rosie Slater-Carr","Ian Goodman","Ian Hopper"];
 
@@ -157,3 +169,8 @@ document.addEventListener("click", function (e) {
 }
 
 autocomplete(document.getElementById("myInput"), names);
+
+/* make element dispear */
+function myFunction() { 
+  document.getElementById("panel-disappear").style.display="none";  
+}

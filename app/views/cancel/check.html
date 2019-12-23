@@ -17,7 +17,7 @@
 
         {% include "includes/shift-details-summary.html" %}
 
-      <form class="form" action="/confirm-cancel-shift" method="post">
+      <form class="form" action="/cancel/confirm" method="post">
 
         <input type="hidden" id="phone-security" name="begin-cancel-shift" value="check">
 
@@ -28,9 +28,9 @@
           <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
         </div>
 
-        <a id="red-button" class="govuk-button" data-module="govuk-button" href="/confirm-cancel-shift">Yes, take me off this shift</a>
+        <a id="red-button" class="govuk-button" data-module="govuk-button" href="/cancel/confirm">Yes, take me off this shift</a>
 
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="#">No, I can still do this shift</a>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/home">No, I can still do this shift</a>
 
       </form>
 

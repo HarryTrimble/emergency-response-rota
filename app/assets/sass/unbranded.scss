@@ -149,7 +149,7 @@ input[type=submit] {
 }
 
 #red-button {
-  background-color: #AD1220; 
+  background-color: #05853A; 
 }
 
 #dashboard-nav li {
@@ -169,8 +169,18 @@ input[type=submit] {
   font-weight: 400;
 }
 
+#accordion-link {
+}
+
 #panel {
   text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+}
+
+#panel-disappear {
+  text-align: left;
+  background-color: #fff;
 }
 
 #reg-number {

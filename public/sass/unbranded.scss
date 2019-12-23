@@ -77,12 +77,6 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     #hidden-element-on-model {
         display: none;
     }
-    .bin {
-        padding: 0;
-    }
-    .bin br {
-        display: none;
-    }
 }
 
 /*the container must be positioned relative:*/
@@ -155,7 +149,7 @@ input[type=submit] {
 }
 
 #red-button {
-  background-color: #ee2a24; 
+  background-color: #05853A; 
 }
 
 #dashboard-nav li {
@@ -175,6 +169,22 @@ input[type=submit] {
   font-weight: 400;
 }
 
+#accordion-link {
+}
+
 #panel {
   text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+}
+
+#reg-number {
+  text-align: center;
+  background-color: #ffd307;
+  border-radius: .25em;
+  text-transform: uppercase;     width: 150px;
+  max-width: 150px;
+  font: 26px CharlesWrightBoldCaps,Verdana;
+  padding: .2em 0;
+  font-size: 140%;
 }

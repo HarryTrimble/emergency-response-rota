@@ -1,0 +1,68 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/choose-rota-shifts">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h2 class="govuk-heading-l">Confirm your shifts for the rota</h2>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          {% include "includes/march-rota-panel.html" %}
+          <br>
+
+          <table class="govuk-table" style="margin-bottom: 0px;">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Sun 1 Mar</td>
+                <td class="govuk-table__cell">
+                  {% include "includes/volunteer-name.html" %}                
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Mon 23 Mar</td>
+                <td class="govuk-table__cell">
+                  {% include "includes/volunteer-name.html" %}                
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Mon 30 Mar</td>
+                <td class="govuk-table__cell">
+                  {% include "includes/volunteer-name.html" %}                
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <form action="/confirm-rota-shifts" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button id="red-button" type="submit" class="govuk-button" data-module="govuk-button">
+            Yes, I want these shifts
+          </button>
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}
