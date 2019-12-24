@@ -1,0 +1,37 @@
+{% extends "layout_authentication.html" %}
+
+{% block pageTitle %}
+  Sent text message
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Deploy</span>
+      <h1 class="govuk-heading-l">Send 'deploy now' text message</h1>
+
+      <form class="form" action="/deploy/now/confirm" method="post">
+
+        <p class="govuk-body">This is what the text message will say:</p>
+
+        <div class="govuk-inset-text">
+          {% include "deploy/now/content.html" %}
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Mobile phone number
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="email" name="phoneNumber">
+        </div>
+
+        <button id="red-button" class="govuk-button" data-module="govuk-button">Send text message</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

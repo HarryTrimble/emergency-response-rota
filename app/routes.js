@@ -114,14 +114,14 @@ router.post('/sign-in/live-emergency/two-factor-authentication', function (req, 
 
 });
 
-// Confirm choosing on-call shifts
+// Confirm cancelling shift
 router.post('/cancel/confirm', function (req, res) {
 
   notify.sendSms(
     // this long string is the template ID, copy it from the template
     // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
     // in your code.
-    '56c4d2f0-e224-4775-832f-2d72975016d4',
+    '2149e3f9-919a-4752-8566-37438e89168a',
     // `emailAddress` here needs to match the name of the form field in
     // your HTML page
     req.body.phoneNumber//'personalisation': {
@@ -156,5 +156,67 @@ router.post('/on-call-rota/confirm-shifts', function (req, res) {
 
 });
 
+// send 'stand by' text message
+router.post('/deploy/stand-by/confirm', function (req, res) {
+
+  notify.sendSms(
+    // this long string is the template ID, copy it from the template
+    // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+    // in your code.
+    'd994b831-dd19-4a73-9d8b-f3636f4d95a3',
+    // `emailAddress` here needs to match the name of the form field in
+    // your HTML page
+    req.body.phoneNumber//'personalisation': {
+    //'first-name': req.session.data['first-name']
+//}
+  );
+
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/deploy/stand-by/confirm');
+
+});
+
+// send 'deploy now' text message
+router.post('/deploy/now/confirm', function (req, res) {
+
+  notify.sendSms(
+    // this long string is the template ID, copy it from the template
+    // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+    // in your code.
+    'a14f1a72-5ac0-4530-a068-a51c1b79f2d5',
+    // `emailAddress` here needs to match the name of the form field in
+    // your HTML page
+    req.body.phoneNumber//'personalisation': {
+    //'first-name': req.session.data['first-name']
+//}
+  );
+
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/deploy/now/confirm');
+
+});
+
+// send 'stand down' text message
+router.post('/deploy/stand-down/confirm', function (req, res) {
+
+  notify.sendSms(
+    // this long string is the template ID, copy it from the template
+    // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+    // in your code.
+    '2d8d0604-2033-4a7a-8b7f-b77884d581c9',
+    // `emailAddress` here needs to match the name of the form field in
+    // your HTML page
+    req.body.phoneNumber//'personalisation': {
+    //'first-name': req.session.data['first-name']
+//}
+  );
+
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/deploy/stand-down/confirm');
+
+});
 
 module.exports = router

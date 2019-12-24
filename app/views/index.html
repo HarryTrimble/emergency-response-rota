@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Emergency rotas
+  Emergency Response Rota
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Emergency volunteer rotas
+        Emergency Volunteer Rotas
       </h1>
       <p class="govuk-body-l">Prototypes for volunteers to plan their time with the British Red Cross</p>
     </div>
@@ -33,10 +33,10 @@
           <a class="govuk-link govuk-link--no-visited-state" href="/view-shift-details">View shift details</a>
         </li>
         <li>
-          <a class="govuk-link govuk-link--no-visited-state" href="/cancel/check">Canel shift</a>
+          <a class="govuk-link govuk-link--no-visited-state" href="/cancel/preview">Canel shift</a>
         </li>
       </ul>
-
+      <br>
     </div>
 
     <div class="govuk-grid-column-one-third">
@@ -46,7 +46,7 @@
 
       <ul class="govuk-list govuk-list--number">
         <li>
-          <a class="govuk-link govuk-link--no-visited-state" href="/on-call-rota/send-prompt-text-message">Send prompt text message</a>
+          <a class="govuk-link govuk-link--no-visited-state" href="/on-call-rota/send-prompt-text-message">Send 'new rota' text message</a>
         </li>
         <li>
           <a class="govuk-link govuk-link--no-visited-state" href="/sign-in/on-call-rota/numbers">Sign in</a>
@@ -58,17 +58,44 @@
           <a class="govuk-link govuk-link--no-visited-state" href="/on-call-rota/choose-shifts">Choose rota shifts</a>
         </li>
       </ul>
-
+      <br>
     </div>
 
     <div class="govuk-grid-column-one-third">
 
       <span class="govuk-caption-m">Task three</span>
+      <h3 class="govuk-heading-m">Deploy</h3>
+
+      <ul class="govuk-list govuk-list--number">
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="/deploy/stand-by/send">
+            Send 'stand by' text message
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="/deploy/now/send">
+            Send 'deploy now' text message
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="/deploy/stand-down/send">
+            Send 'stand down' text message
+          </a>
+        </li>
+      </ul>
+      <br>
+    </div>
+
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <span class="govuk-caption-m">Task four</span>
       <h3 class="govuk-heading-m">Live emergency</h3>
 
       <ul class="govuk-list govuk-list--number">
         <li>
-          <a class="govuk-link govuk-link--no-visited-state" href="/live-emergency/send-prompt-text-message">Send prompt text message</a>
+          <a class="govuk-link govuk-link--no-visited-state" href="/live-emergency/send-prompt-text-message">Send 'new emergency' text message</a>
         </li>
         <li>
           <a class="govuk-link govuk-link--no-visited-state" href="/sign-in/live-emergency/numbers">Sign in</a>
@@ -77,7 +104,21 @@
           <a class="govuk-link govuk-link--no-visited-state" href="/live-emergency/home">Live emergency</a>
         </li>
       </ul>
+      <br>
+    </div>
+    <div class="govuk-grid-column-one-third">
 
+      <span class="govuk-caption-m">Task five</span>
+      <h3 class="govuk-heading-m">Profile and skills</h3>
+
+      <ul class="govuk-list govuk-list--number">
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">
+            View profile
+          </a>
+        </li>
+      </ul>
+      <br>
     </div>
 </div>
 
