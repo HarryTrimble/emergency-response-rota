@@ -55,7 +55,7 @@
 
         <form action="/on-call-rota/confirm-shifts" method="post" novalidate>
 
-          <input type="hidden" name="answers-checked" value="true">
+          {% include "includes/pass-phoneNumber-to-Notify.html" %}  
 
           <button id="red-button" type="submit" class="govuk-button" data-module="govuk-button">
             Yes, I want these shifts

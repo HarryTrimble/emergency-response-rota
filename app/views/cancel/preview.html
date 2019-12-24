@@ -1,0 +1,42 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+   Cancel shift
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-l">Do you want to be taken off this shift?</h2>
+
+        {% include "includes/shift-details-summary.html" %}
+
+        <form class="form" action="/cancel/confirm" method="post">
+
+          <input type="hidden" id="phone-security" name="begin-cancel-shift" value="check">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+              Reason for not doing shift (optional)
+            </label>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+
+          {% include "includes/pass-phoneNumber-to-Notify.html" %}  
+
+          <a id="red-button" class="govuk-button" data-module="govuk-button" href="/cancel/confirm">Yes, take me off this shift</a>
+
+          <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/home">No, I can still do this shift</a>
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

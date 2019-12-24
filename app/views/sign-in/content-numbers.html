@@ -1,17 +1,4 @@
-{% extends "layout_authentication.html" %}
-
-{% block pageTitle %}
-  Sign in
-{% endblock %}
-
-{% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">Sign in</h1>
-
-      <form class="form" action="/sign-in-2fa" method="post">
+        <h1 class="govuk-heading-l">Sign in</h1>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="email">
@@ -28,12 +15,3 @@
         </div>
 
         <button id="red-button" class="govuk-button" data-module="govuk-button">Continue</button>
-
-      </form>
-
-      <a href="#" class="govuk-link">Forgot your volunteer number</a>
-
-    </div>
-  </div>
-
-{% endblock %}

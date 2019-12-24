@@ -1,0 +1,23 @@
+{% extends "layout_authentication.html" %}
+
+{% block pageTitle %}
+  Sign in
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/sign-in/on-call-rota/two-factor-authentication" method="post">
+
+        {% include "sign-in/content-numbers.html" %}
+
+      </form>
+
+      <a href="#" class="govuk-link">Forgot your volunteer number</a>
+
+    </div>
+  </div>
+
+{% endblock %}

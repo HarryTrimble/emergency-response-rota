@@ -1,0 +1,24 @@
+{% extends "layout_authentication.html" %}
+
+{% block pageTitle %}
+  Security text message
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/home" method="post">
+
+        {% include "sign-in/content-two-factor-authentication.html" %}
+
+      </form>
+
+      <a href="#" class="govuk-link">Not recieved a text message?</a>
+
+    </div>
+  </div>
+
+{% endblock %}
