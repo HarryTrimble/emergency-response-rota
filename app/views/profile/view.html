@@ -1,0 +1,130 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+  View profile
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-l">Volunteer profile</span>
+        <h2 class="govuk-heading-l">{% include "includes/volunteer-name.html" %}</h2>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          <span class="govuk-caption-m">First joined</span>
+          <h3 class="govuk-heading-m" style="margin-bottom: 0px;">23 Aug 2007
+          </h3>
+
+        </div>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          <span class="govuk-caption-m">Total shifts done</span>
+          <h3 class="govuk-heading-m">213
+          </h3>
+
+          <a href="#" class="govuk-link">See past shifts</a>
+
+        </div>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          <span class="govuk-caption-m">Roles we know you can do</span>
+
+          <table class="govuk-table" style="margin-bottom: 0px;">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Operations team leader</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Emergency response volunteer</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Group leader</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Driver</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Welfare</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Logistics</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Logist</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          <span class="govuk-caption-m">Job outside volunteering</span>
+          <h3 class="govuk-heading-m" style="margin-bottom: 0px;">Paramedic
+          </h3>
+
+        </div>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          <span class="govuk-caption-m">Other skills we shoud know about</span>
+          <h3 class="govuk-heading-m">Empty
+          </h3>
+
+          <a href="#" class="govuk-link">Add skills</a>
+
+        </div>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+          <span class="govuk-caption-m">Contact details</span>
+
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" style="border-top: 0px;">
+                  Mobile number                  
+                </th>
+                <td class="govuk-table__cell">07943251234</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  Address                
+                </th>
+                <td class="govuk-table__cell">
+                  12 Saxford Street, Wellport, WP2 8HX
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  Email address<br>
+                </th>
+                <td class="govuk-table__cell">nkanaa@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <a href="#" class="govuk-link">Edit contact details</a>
+
+
+        </div>
+
+      <form class="form" action="/cancel/preview" method="post">
+
+        <input type="hidden" id="phone-security" name="begin-cancel-shift" value="check">
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
