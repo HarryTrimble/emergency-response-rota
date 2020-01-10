@@ -193,3 +193,53 @@ input[type=submit] {
   padding: .2em 0;
   font-size: 140%;
 }
+
+/* Calendar styling */
+
+.calendar {
+  margin-bottom: 0px;
+}
+
+.day-of-week td {
+  width: 14.28%;
+  border-bottom: 0px;
+  text-align: center;
+}
+
+.dates td {
+  width: 14.28%;
+  border-bottom: 0px;
+  text-align: center;
+  font-weight: 400;
+
+
+#shift-full {
+  background: #193351;
+  color: #ffffff;
+}
+
+#shift-full a {
+  color:  #ffffff;
+}
+
+#part-full {
+  background: repeating-linear-gradient(
+    135deg,
+    #ffdd00,
+    #ffdd00 10px,
+    #ffffff 10px,
+    #ffffff 20px
+  );
+}
+
+#part-full a {
+  color:  #0b0c0c;
+}
+
+#shift-empty {
+  background: #ffffff;
+}
+
+#shift-empty a {
+  color:  #0b0c0c;
+}
