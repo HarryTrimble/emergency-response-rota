@@ -173,13 +173,6 @@ input[type=submit] {
   color: #0b0c0c; 
 }
 
-.available-shifts {
-  font-weight: 400; 
-  font-size: 19px; 
-  color: #0b0c0c
-  text-decoration: none;
-}
-
 #panel {
   text-align: left;
   border: 1px solid #e2e2e2;
@@ -189,6 +182,20 @@ input[type=submit] {
 #panel-disappear {
   text-align: left;
   background-color: #fff;
+}
+
+#taken-panel {
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: #f3f2f1;
+}
+
+#taken-panel p {
+  margin-bottom: 0px;
+}
+
+#shift-block {
+  margin-bottom: 10px;
 }
 
 #reg-number {
@@ -222,27 +229,40 @@ input[type=submit] {
   padding: 10px 10px 10px 10px;
 }
 
-#shift-full {
-  background: #193351;
-  color: #ffffff;
+#available {
+  border: 1px solid #e2e2e2;
+  background-color: #ffffff;
 }
 
-#shift-full a {
-  color:  #ffffff;
+#available a {
+  color: #0b0c0c;
 }
 
-#part-full {
-  background: #f3f2f1;
+#day-taken {
+  border: 1px solid #e2e2e2;
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(270deg, #f3f2f1 48%, #e2e2e2 4%, #ffffff 48%);
 }
 
-#part-full a {
-  color:  #0b0c0c;
+#day-taken a {
+  color: #0b0c0c;
 }
 
-#shift-empty {
-  background: #ffffff;
+#night-taken {
+  border: 1px solid #e2e2e2;
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(270deg, #ffffff 48%, #e2e2e2 4%, #f3f2f1 48%);
 }
 
-#shift-empty a {
-  color:  #0b0c0c;
+#night-taken a {
+  color: #0b0c0c;
+}
+
+#both-taken {
+  border: 1px solid #e2e2e2;
+  background-color: #f3f2f1;
+}
+
+#both-taken a {
+  color: #0b0c0c;
 }
