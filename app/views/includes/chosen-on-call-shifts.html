@@ -1,9 +1,9 @@
           <table class="govuk-table" style="margin-bottom: 0px;">
             <tbody class="govuk-table__body">
               <!-- Week beginning 24 Feb -->
-              {% if data['Sun-1-Mar']=="true" %}
+              {% if data['Sun-1-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sun 1 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 1 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -13,9 +13,9 @@
                 </tr>
               {% endif %}
               <!-- Week beginning 2 Mar -->
-              {% if data['Mon-2-Mar']=="true" %}
+              {% if data['Mon-2-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Mon 2 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 2 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -24,9 +24,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Tue-3-Mar']=="true" %}
+              {% if data['Tue-3-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Tue 3 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 3 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -35,9 +35,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Wed-4-Mar']=="true" %}
+              {% if data['Wed-4-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Wed 4 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 4 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -46,9 +46,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Thu-5-Mar']=="true" %}
+              {% if data['Thu-5-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Thu 5 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 5 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -57,9 +57,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Fri-6-Mar']=="true" %}
+              {% if data['Fri-6-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Fri 6 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 5 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -68,9 +68,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Sat-7-Mar']=="true" %}
+              {% if data['Sun-8-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sat 7 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 8 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -79,21 +79,11 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Sun-8-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sun 8 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
+
               <!-- Week beginning 9 Mar -->
-              {% if data['Mon-9-Mar']=="true" %}
+              {% if data['Tue-10-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Mon 9 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 10 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -102,9 +92,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Tue-10-Mar']=="true" %}
+              {% if data['Wed-11-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Tue 10 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 11 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -113,9 +103,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Wed-11-Mar']=="true" %}
+              {% if data['Fri-13-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Wed 11 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 13 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -124,54 +114,12 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Thu-12-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Thu 12 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['Fri-13-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Fri 13 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['Sat-14-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sat 14 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['Sun-15-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sun 15 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
+
+
               <!-- Week beginning 16 Mar -->
-              {% if data['Mon-16-Mar']=="true" %}
+              {% if data['Mon-16-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Mon 16 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 16 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -180,9 +128,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Tue-17-Mar']=="true" %}
+              {% if data['Mon-16-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Tue 17 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 16 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -191,9 +139,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Wed-18-Mar']=="true" %}
+              {% if data['Tue-17-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Wed 18 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 17 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -202,9 +150,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Thu-19-Mar']=="true" %}
+              {% if data['Thu-19-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Thu 19 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 19 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -213,9 +161,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Fri-20-Mar']=="true" %}
+              {% if data['Thu-19-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Fri 20 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 19 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -224,9 +172,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Sat-21-Mar']=="true" %}
+              {% if data['Sat-21-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sat 21 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 21 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -235,9 +183,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Sun-22-Mar']=="true" %}
+              {% if data['Sun-22-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sun 22 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 22 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -246,10 +194,11 @@
                   </td>
                 </tr>
               {% endif %}
+
               <!-- Week beginning 23 Mar -->
-              {% if data['Mon-23-Mar']=="true" %}
+              {% if data['Tue-24-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Mon 23 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 24 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -258,9 +207,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Tue-24-Mar']=="true" %}
+              {% if data['Thu-26-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Tue 24 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 26 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -269,9 +218,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Wed-25-Mar']=="true" %}
+              {% if data['Sat-28-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Wed 25 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 28 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -280,54 +229,11 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Thu-26-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Thu 26 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['Fri-27-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Fri 27 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['Sat-28-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sat 28 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['Sun-29-Mar']=="true" %}
-                <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Sun 29 Mar</td>
-                  <td class="govuk-table__cell">
-                    {% include "includes/volunteer-name.html" %}                
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
+
               <!-- Week beginning 30 Mar -->
-              {% if data['Mon-30-Mar']=="true" %}
+              {% if data['Mon-30-Mar-day']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Mon 30 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 30 Mar<br>Day shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -336,9 +242,9 @@
                   </td>
                 </tr>
               {% endif %}
-              {% if data['Tue-31-Mar']=="true" %}
+              {% if data['Mon-30-Mar-night']=="true" %}
                 <tr id="panel-disappear" class="govuk-table__row">
-                  <td class="govuk-table__cell">Tue 31 Mar</td>
+                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 30 Mar<br>Night shift</td>
                   <td class="govuk-table__cell">
                     {% include "includes/volunteer-name.html" %}                
                   </td>
@@ -346,6 +252,7 @@
                     <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
                   </td>
                 </tr>
-              {% endif %}        
+              {% endif %}
+      
             </tbody>
           </table>

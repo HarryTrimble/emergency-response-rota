@@ -1,11 +1,7 @@
   {% extends "layout_signed_in.html" %}
 
   {% block pageTitle %}
-    Home - new rota
-  {% endblock %}
-
-  {% block beforeContent %}
-    <a class="govuk-back-link" href="/home-new-rota">Back</a>
+    Home
   {% endblock %}
 
   {% block content %}
@@ -13,15 +9,106 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <h2 class="govuk-heading-l">
-          Choose your shifts for:
-        </h2>
+        <h4 class="govuk-heading-s">
+          {% include "includes/volunteer-name.html" %}
+        </h4>
 
         <div id="panel" class="govuk-panel govuk-panel--confirmation">
           {% include "includes/march-rota-panel.html" %}
         </div>
 
-        <br>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              View calendar
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <table class="govuk-table calendar">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row day-of-week">
+                  <td scope="col" class="govuk-table__header app-custom-class">M</td>
+                  <td scope="col" class="govuk-table__header app-custom-class">T</td>
+                  <td scope="col" class="govuk-table__header app-custom-class">W</td>
+                  <td scope="col" class="govuk-table__header app-custom-class">T</td>
+                  <td scope="col" class="govuk-table__header app-custom-class">F</td>
+                  <td scope="col" class="govuk-table__header app-custom-class">S</td>
+                  <td scope="col" class="govuk-table__header app-custom-class">S</td>
+                </tr>
+              </tdead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row dates">
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">1</a></td>
+                </tr>
+                <tr class="govuk-table__row dates">
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">2</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">3</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">4</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">5</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">6</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">7</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">8</a></td>
+                </tr>
+                <tr class="govuk-table__row dates">
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">9</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">10</a></td>
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">11</a></td>
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">12</a></td>
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">13</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">14</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">15</a></td>
+                </tr>
+                <tr class="govuk-table__row dates">
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">16</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">17</a></td>
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">18</a></td>
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">19</a></td>
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">20</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">21</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">22</a></td>
+                </tr>
+                <tr class="govuk-table__row dates">
+                  <td scope="row" id="part-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">23</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">24</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">25</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">26</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">27</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">28</a></td>
+                  <td scope="row" id="shift-full" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">29</a></td>
+                </tr>
+                <tr class="govuk-table__row dates">
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">30</a></td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header"><a href="#" class="govuk-link govuk-link--no-visited-state">30</a></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table class="govuk-table calendar">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row dates">
+                  <td scope="row" id="shift-full" class="govuk-table__header">Shift full</td>
+                  <td scope="row" id="part-full" class="govuk-table__header">Part Full</td>
+                  <td scope="row" id="shift-empty" class="govuk-table__header">Shift empty</td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                  <td scope="row" class="govuk-table__header"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
 
         <form class="form" action="/on-call-rota/preview-shifts" method="post">
 
@@ -31,24 +118,38 @@
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
                   <span id="accordion-link" class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                    Week beginning 24 Feb
+                    Week beginning 24 Feb<br>
                   </span>
                 </h2>
+                <span class="govuk-body available-shifts">1 shift available</span>
               </div>
               <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
-                <div class="govuk-form-group">
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 1 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-1-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-1-Mar-night" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Sunday</span> 1 March
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 1 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
+                <!-- end shift block -->
 
               </div>
             </div>
@@ -57,60 +158,168 @@
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
                   <span id="accordion-link" class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                    Week beginning 2 Mar
+                    Week beginning 2 Mar<br>
                   </span>
                 </h2>
+                <span class="govuk-body available-shifts">6 shifts available</span>
               </div>
-              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">     
 
-                <div class="govuk-form-group">
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-2-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-2-Mar-day" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Monday</span> 2 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-3-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Tuesday</span> 3 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Wed-4-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Wednesday</span> 4 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-5-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Thursday</span> 5 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Fri-6-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Friday</span> 6 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sat-7-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Saturday</span> 7 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-8-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Sunday</span> 8 March
+                          <span class="govuk-!-font-weight-bold">Monday</span> 2 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Monday 2 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Tuesday 3 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-3-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 3 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Wed-4-Mar-day" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Wednesday</span> 4 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Wednesday 4 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Thursday 5 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-5-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 5 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Fri-6-Mar-day" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Friday</span> 6 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Friday 6 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Saturday 7 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Saturday 7 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 8 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-8-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 8 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
 
               </div>
             </div>
@@ -122,57 +331,160 @@
                     Week beginning 9 Mar
                   </span>
                 </h2>
+                <span class="govuk-body available-shifts">3 shifts available</span>
               </div>
               <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
-                <div class="govuk-form-group">
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Monday 9 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Monday 9 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Tuesday 10 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-9-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-10-Mar-night" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Monday</span> 9 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-10-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Tuesday</span> 10 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Wed-11-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Wednesday</span> 11 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-12-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Thursday</span> 12 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Fri-13-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Friday</span> 13 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sat-14-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Saturday</span> 14 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-15-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Sunday</span> 15 March
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 10 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Wednesday 11 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Wed-11-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Wednesday</span> 11 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Thursday 12 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Thursday 12 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Fri-13-Mar-day" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Friday</span> 13 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Friday 13 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Saturday 14 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Saturday 14 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 15 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 15 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
               </div>
             </div>
             <!-- week beginning 16 Mar -->
@@ -183,56 +495,174 @@
                     Week beginning 16 Mar
                   </span>
                 </h2>
+                <span class="govuk-body available-shifts">7 shifts available</span>
               </div>
               <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <div class="govuk-form-group">
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-16-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-16-Mar-day" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Monday</span> 16 March
+                          <span class="govuk-!-font-weight-bold">Monday</span> 16 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-17-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-16-Mar-night" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Tuesday</span> 17 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Wed-18-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Wednesday</span> 18 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-19-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Thursday</span> 19 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Fri-20-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Friday</span> 20 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sat-21-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Saturday</span> 21 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-22-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Sunday</span> 22 March
+                          <span class="govuk-!-font-weight-bold">Monday</span> 16 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Tuesday 17 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-17-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 17 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Wednesday 18 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Wednesday 18 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->      
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-19-Mar-day" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 19 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-19-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 19 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Friday 20 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Friday 20 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Sat-21-Mar-day" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Saturday</span> 21 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Saturday 22 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-22-Mar-day" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Sunday</span> 22 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 22 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
               </div>
             </div>
             <!-- week beginning 23 Mar -->
@@ -243,56 +673,160 @@
                     Week beginning 23 Mar
                   </span>
                 </h2>
+                <span class="govuk-body available-shifts">3 shifts available</span>
               </div>
               <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <div class="govuk-form-group">
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Monday 23 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Monday 23 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block --> 
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Tuesday 24 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-23-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-24-Mar-night" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Monday</span> 23 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-24-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Tuesday</span> 24 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Wed-25-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Wednesday</span> 25 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-26-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Thursday</span> 26 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Fri-27-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Friday</span> 27 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sat-28-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Saturday</span> 28 March
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Sun-29-Mar" type="checkbox" value="true">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Sunday</span> 29 March
+                          <span class="govuk-!-font-weight-bold">Tuesday</span> 24 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Wednesday 25 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Wednesday 25 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block --> 
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Thu-26-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Thursday</span> 26 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Thursday 26 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block --> 
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Friday 27 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Friday 27 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block --> 
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Saturday 28 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Sat-28-Mar-night" type="checkbox" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          <span class="govuk-!-font-weight-bold">Saturday</span> 28 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 29 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Sunday 29 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block --> 
+
               </div>
             </div>
             <!-- week beginning 30 Mar -->
@@ -303,26 +837,53 @@
                     Week beginning 30 Nov
                   </span>
                 </h2>
+                <span class="govuk-body available-shifts">2 shifts available</span>
               </div>
               <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <div class="govuk-form-group">
+
+                <!-- start shift block -->
+                <div id="shift-block" class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-30-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-30-Mar-day" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Monday</span> 30 March
+                          <span class="govuk-!-font-weight-bold">Monday</span> 30 March<br>
+                          Day shift (7:00 to 19:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="Tue-31-Mar" type="checkbox" value="true">
+                        <input class="govuk-checkboxes__input" id="organisation" name="Mon-30-Mar-night" type="checkbox" value="true">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          <span class="govuk-!-font-weight-bold">Tuesday</span> 31 March
+                          <span class="govuk-!-font-weight-bold">Monday</span> 30 March<br>
+                          Night shift (19:00 to 7:00)<br>
+                          <a href="#" class="govuk-link--no-visited-state">View shift details</a>
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Tuesday 31 March<br>
+                    Day shift (7:00 to 19:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->
+
+                <!-- start shift block -->
+                <div id="taken-panel" class="govuk-panel govuk-panel--confirmation">
+                  <span class="govuk-caption-m">Shift taken</span>
+                  <p>Tuesday 31 March<br>
+                    Night shift (19:00 to 7:00)<br>
+                  </p>
+                </div>
+                <!-- end shift block -->  
+
               </div>
             </div>
           </div>

@@ -170,6 +170,14 @@ input[type=submit] {
 }
 
 #accordion-link {
+  color: #0b0c0c; 
+}
+
+.available-shifts {
+  font-weight: 400; 
+  font-size: 19px; 
+  color: #0b0c0c
+  text-decoration: none;
 }
 
 #panel {
@@ -195,7 +203,6 @@ input[type=submit] {
 }
 
 /* Calendar styling */
-
 .calendar {
   margin-bottom: 0px;
 }
@@ -204,6 +211,7 @@ input[type=submit] {
   width: 14.28%;
   border-bottom: 0px;
   text-align: center;
+  padding: 10px 10px 10px 10px;
 }
 
 .dates td {
@@ -211,7 +219,8 @@ input[type=submit] {
   border-bottom: 0px;
   text-align: center;
   font-weight: 400;
-
+  padding: 10px 10px 10px 10px;
+}
 
 #shift-full {
   background: #193351;
@@ -223,13 +232,7 @@ input[type=submit] {
 }
 
 #part-full {
-  background: repeating-linear-gradient(
-    135deg,
-    #ffdd00,
-    #ffdd00 10px,
-    #ffffff 10px,
-    #ffffff 20px
-  );
+  background: #f3f2f1;
 }
 
 #part-full a {

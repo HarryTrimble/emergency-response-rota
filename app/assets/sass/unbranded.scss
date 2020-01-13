@@ -170,6 +170,7 @@ input[type=submit] {
 }
 
 #accordion-link {
+  color: #0b0c0c; 
 }
 
 #panel {
@@ -181,6 +182,20 @@ input[type=submit] {
 #panel-disappear {
   text-align: left;
   background-color: #fff;
+}
+
+#taken-panel {
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  background-color: #f3f2f1;
+}
+
+#taken-panel p {
+  margin-bottom: 0px;
+}
+
+#shift-block {
+  margin-bottom: 10px;
 }
 
 #reg-number {
