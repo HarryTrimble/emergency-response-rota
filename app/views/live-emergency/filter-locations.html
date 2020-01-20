@@ -1,0 +1,72 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Wellport floods 2020</span>
+      <h2 class="govuk-heading-l">
+        Where are you able to travel to help?
+      </h2>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <span id="waste-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="leisure-centre" type="checkbox" value="true" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Leisure Centre
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          23 Station Road, Wellport, WP9 4RL
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="mosque" type="checkbox" value="true" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Meadow Street Mosque
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          48 Meadow Street, Wellport, WP8 8PL
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="civic-centre" type="checkbox" value="true" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Wellport Civic Centre
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          8 High Road, Wellport, WP1 7XH
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="phone-support-line" type="checkbox" value="true" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Phone support line
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          British Red Cross, Coronation Close, Norwich, NR6 5HD
+        </span>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+        <button id="red-button" class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

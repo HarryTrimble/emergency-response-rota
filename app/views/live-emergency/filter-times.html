@@ -1,0 +1,188 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Wellport floods 2020</span>
+      <h2 class="govuk-heading-l">
+        When are you able to help?
+      </h2>
+
+      <p>Once we know when enough volunteers are available, we will asign you to shifts.</p>
+
+      <form class="form" action="/live-emergency/filter-locations" method="post">
+
+        <!-- Sat 15 -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Saturday 15 March (today)
+              </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+              Select all that apply
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sat-15-morning-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Morning shift (7:30 to 14:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sat-15-afternoon-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Afternoon shift (13:30 to 19:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sat-15-evening-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Evening shift (18:30 to 00:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sat-15-night-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Night shift (23:30 to 8:00)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Sun 16 -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Sunday 16 March (tomorrow)
+              </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+              Select all that apply
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sun-16-morning-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Morning shift (7:30 to 14:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sun-16-afternoon-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Afternoon shift (13:30 to 19:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sun-16-evening-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Evening shift (18:30 to 00:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="sun-16-night-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Night shift (23:30 to 8:00)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Mon 17 -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Monday 17 March
+              </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+              Select all that apply
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="mon-17-morning-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Morning shift (7:30 to 14:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="mon-17-afternoon-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Afternoon shift (13:30 to 19:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="mon-17-evening-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Evening shift (18:30 to 00:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="mon-17-night-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Night shift (23:30 to 8:00)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Tue 15 -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Tuesday 18 March
+              </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+              Select all that apply
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="tue-18-morning-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Morning shift (7:30 to 14:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="tue-18-afternoon-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Afternoon shift (13:30 to 19:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="tue-18-evening-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Evening shift (18:30 to 00:00)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="tue-18-night-shift" type="checkbox" value="true">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Night shift (23:30 to 8:00)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button id="red-button" class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
