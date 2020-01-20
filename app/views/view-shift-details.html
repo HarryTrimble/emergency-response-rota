@@ -12,8 +12,11 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-        <h2 class="govuk-heading-l">Shift details</h2>
+      <h2 class="govuk-heading-l">Shift details</h2>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
 
         <div id="panel" class="govuk-panel govuk-panel--confirmation">
 
@@ -23,25 +26,6 @@
           <p class="govuk-body" style="margin-bottom: 0px;"> 
             9:00 to 17:00
           </p>
-
-        </div>
-
-        <div id="panel" class="govuk-panel govuk-panel--confirmation">
-
-          <span class="govuk-caption-m">Shift type</span>
-          <h3 class="govuk-heading-m" style="margin-bottom: 0px;">On-call
-          </h3>
-          <p class="govuk-body" style="margin-bottom: 0px;"> 
-            Short description of shift type
-          </p>
-
-        </div>
-
-        <div id="panel" class="govuk-panel govuk-panel--confirmation">
-
-          <span class="govuk-caption-m">Emergency response area</span>
-          <h3 class="govuk-heading-m" style="margin-bottom: 0px;">Wellport County
-          </h3>
 
         </div>
 
@@ -83,29 +67,40 @@
 
         </div>
 
-        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+    </div>
+    <div class="govuk-grid-column-one-half">
 
-          <span class="govuk-caption-m">Driver</span>
-          <h3 class="govuk-heading-m" style="margin-bottom: 0px;">{% include "includes/volunteer-name.html" %} <span class="govuk-!-font-weight-regular">(you)</span>
-          </h3>
+      <div id="panel" class="govuk-panel govuk-panel--confirmation">
+        <span class="govuk-caption-m">Vehicle</span>
+        <h3 class="govuk-heading-m">Fiat van
+        </h3>
+        <p class="govuk-body govuk-!-font-weight-bold" id="reg-number">LJ15 EFS</p>
+        <p class="govuk-body" style="margin-bottom: 0px;"> 
+          Kendal Fire Station,<br>
+          1 Burneside Rd, Kendal LA9 4RL
+        </p>
+      </div>
 
-        </div>
+      <div id="panel" class="govuk-panel govuk-panel--confirmation">
 
-        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+        <span class="govuk-caption-m">Shift type</span>
+        <h3 class="govuk-heading-m" style="margin-bottom: 0px;">On-call
+        </h3>
 
-          <span class="govuk-caption-m">Vehicle</span>
-          <h3 class="govuk-heading-m">Fiat van
-          </h3>
+      </div>
 
-          <p class="govuk-body govuk-!-font-weight-bold" id="reg-number">LJ15 EFS</p>
+      <div id="panel" class="govuk-panel govuk-panel--confirmation">
 
-          <p class="govuk-body" style="margin-bottom: 0px;"> 
-            Kendal Fire Station,<br>
-            1 Burneside Rd, Kendal LA9 4RL
-          </p>
+        <span class="govuk-caption-m">Emergency response area</span>
+        <h3 class="govuk-heading-m" style="margin-bottom: 0px;">Wellport County
+        </h3>
 
-        </div>
+      </div>
 
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/cancel/preview" method="post">
 
         <input type="hidden" id="phone-security" name="begin-cancel-shift" value="check">
@@ -113,7 +108,6 @@
         <button id="red-button" class="govuk-button" data-module="govuk-button">I can't do this shift</button>
 
       </form>
-
     </div>
   </div>
 
