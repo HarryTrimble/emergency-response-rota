@@ -1,641 +1,280 @@
         <div id="panel" class="govuk-panel govuk-panel--confirmation">
 
-          {% include "includes/live-emergency-panel.html" %}
-          <br>
+          <!-- Sat 15 Feb -->
+          {% if data['sat-15-evening-shift']=="true" or data['sat-15-night-shift']=="true" %}
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Sat 15 Feb (today)</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['sat-15-evening-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Evening shift <nobr>(18:30 to 00:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['sat-15-night-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Night shift <nobr>(23:30 to 8:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+              </tbody>
+            </table>
+          {% endif %}
 
-          <table class="govuk-table" style="margin-bottom: 0px;">
-            <tbody class="govuk-table__body">
-              <!-- Sat 15 Feb - day shifts -->
-              {% if data['leisure-centre-Sat-15-Feb-day']=="true" %}
+          <!-- Sun 16 Feb -->
+          {% if data['sun-16-morning-shift']=="true" or data['sun-16-afternoon-shift']=="true" or data['sun-16-evening-shift']=="true" or data['sun-16-night-shift']=="true" %}
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
+                  <th scope="col" class="govuk-table__header">Sun 16 Feb (tomorrow)</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
                 </tr>
-              {% endif %}
-              {% if data['mosque-Sat-15-Feb-day']=="true" %}
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['sun-16-morning-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Morning shift <nobr>(7:30 to 14:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['sun-16-afternoon-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Afternoon shift <nobr>(13:30 to 19:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+                {% if data['sun-16-evening-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Evening shift <nobr>(18:30 to 00:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['sun-16-night-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Night shift <nobr>(23:30 to 8:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+              </tbody>
+            </table>
+          {% endif %}
+
+          <!-- Mon 17 Feb -->
+          {% if data['mon-17-morning-shift']=="true" or data['mon-17-afternoon-shift']=="true" or data['mon-17-evening-shift']=="true" or data['mon-17-night-shift']=="true" %}
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
+                  <th scope="col" class="govuk-table__header">Mon 17 Feb</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
                 </tr>
-              {% endif %}
-              {% if data['civic-centre-Sat-15-Feb-day']=="true" %}
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['mon-17-morning-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Morning shift <nobr>(7:30 to 14:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['mon-17-afternoon-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Afternoon shift <nobr>(13:30 to 19:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+                {% if data['mon-17-evening-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Evening shift <nobr>(18:30 to 00:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['mon-17-night-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Night shift <nobr>(23:30 to 8:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+              </tbody>
+            </table>
+          {% endif %}
+
+          <!-- Mon 17 Feb -->
+          {% if data['tue-18-morning-shift']=="true" or data['tue-18-afternoon-shift']=="true" or data['tue-18-evening-shift']=="true" or data['tue-18-night-shift']=="true" %}
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
+                  <th scope="col" class="govuk-table__header">Tue 18 Feb</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
                 </tr>
-              {% endif %}
-              {% if data['phone-support-line-Sat-15-Feb-day']=="true" %}
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['tue-18-morning-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Morning shift <nobr>(7:30 to 14:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['tue-18-afternoon-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Afternoon shift <nobr>(13:30 to 19:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+                {% if data['tue-18-evening-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Evening shift <nobr>(18:30 to 00:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['tue-18-night-shift']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Night shift <nobr>(23:30 to 8:00)</nobr></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %} 
+              </tbody>
+            </table>
+          {% endif %}
+
+          <!-- Mon 17 Feb -->
+          {% if data['leisure-centre']=="true" or data['mosque']=="true" or data['civic-centre']=="true" or data['phone-support-line']=="true" %}
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
+                  <th scope="col" class="govuk-table__header">Locations</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
                 </tr>
-              {% endif %}
-              <!-- Sat 15 Feb - night shifts -->
-              {% if data['leisure-centre-Sat-15-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Sat-15-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Sat-15-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Sat-15-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sat</span> 15 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              <!-- Sun 16 Feb - day shifts -->
-              {% if data['leisure-centre-Sun-16-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Sun-16-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Sun-16-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Sun-16-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              <!-- Sun 16 Feb - day shifts -->
-              {% if data['leisure-centre-Sun-16-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Sun-16-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Sun-16-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Sun-16-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Sun</span> 16 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}              
-              <!-- Mon 17 Feb - day shifts -->
-              {% if data['leisure-centre-Mon-17-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Mon-17-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Mon-17-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Mon-17-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              <!-- Mon 17 Feb - Night shifts -->
-              {% if data['leisure-centre-Mon-17-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Mon-17-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Mon-17-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Mon-17-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Mon</span> 17 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}              
-              <!-- Tue 18 Feb - day shifts -->
-              {% if data['leisure-centre-Tue-18-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Tue-18-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Tue-18-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Tue-18-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              <!-- Tue 18 Feb - Night shifts -->
-              {% if data['leisure-centre-Tue-18-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Tue-18-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Tue-18-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Tue-18-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Tue</span> 18 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              <!-- Wed 19 Feb - day shifts -->
-              {% if data['leisure-centre-Wed-19-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Wed-19-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Wed-19-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Wed-19-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              <!-- Wed 19 Feb - Night shifts -->
-              {% if data['leisure-centre-Wed-19-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Wed-19-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Wed-19-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Wed-19-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Wed</span> 19 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}              
-              <!-- Thu 20 Feb - day shifts -->
-              {% if data['leisure-centre-Thu-20-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Thu-20-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Thu-20-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Thu-20-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %} 
-              <!-- Thu 20 Feb - Night shifts -->
-              {% if data['leisure-centre-Thu-20-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Thu-20-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Thu-20-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Thu-20-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Thu</span> 20 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}               
-              <!-- Fri 21 Feb - day shifts -->
-              {% if data['leisure-centre-Fri-21-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Fri-21-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Fri-21-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Fri-21-Feb-day']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Day shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %} 
-              <!-- Fri 21 Feb - Night shifts -->
-              {% if data['leisure-centre-Fri-21-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Leisure Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['mosque-Fri-21-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Mosque             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['civic-centre-Fri-21-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Civic Centre             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if data['phone-support-line-Fri-21-Feb-Night']=="true" %}
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><span class="govuk-!-font-weight-bold">Fri</span> 21 Feb<br>Night shift</td>
-                  <td class="govuk-table__cell">
-                    Phone support line             
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
-                  </td>
-                </tr>
-              {% endif %}                           
-            </tbody>
-          </table>
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['leisure-centre']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Leisure Centre<br>
+                        <span style="color: #626a6e;">23 Station Road, Wellport, WP9 4RL</span></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['mosque']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Meadow Street Mosque<br>
+                        <span style="color: #626a6e;">48 Meadow Street, Wellport, WP8 8PL</span></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['civic-centre']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Wellport Civic Centre<br>
+                        <span style="color: #626a6e;">8 High Road, Wellport, WP1 7XH</span></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                {% if data['leisure-centre']=="true" %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      <span class="govuk-!-font-weight-regular">
+                        Phone support line<br>
+                        <span style="color: #626a6e;">British Red Cross, Coronation Close, Norwich, NR6 5HD</span></th>
+                      </span>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a>
+                    </td>
+                  </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          {% endif %}
 
         </div>
