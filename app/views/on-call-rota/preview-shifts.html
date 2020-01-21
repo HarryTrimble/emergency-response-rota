@@ -12,26 +12,19 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h2 class="govuk-heading-l">Confirm your shifts for the rota</h2>
+      <h2 class="govuk-heading-l">Confirm booking onto this shift</h2>
 
-        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+          {% include "on-call-rota/shift-summary.html" %}
 
-          {% include "includes/march-rota-panel.html" %}
-          <br>
+          <form action="/on-call-rota/confirm-shifts" method="post" novalidate>
 
-          {% include "includes/chosen-on-call-shifts.html" %}  
+            {% include "includes/pass-phoneNumber-to-Notify.html" %}  
 
-        </div>
+            <button id="red-button" type="submit" class="govuk-button" data-module="govuk-button">
+              Yes, book me on this shift
+            </button>
 
-        <form action="/on-call-rota/confirm-shifts" method="post" novalidate>
-
-          {% include "includes/pass-phoneNumber-to-Notify.html" %}  
-
-          <button id="red-button" type="submit" class="govuk-button" data-module="govuk-button">
-            Yes, I want these shifts
-          </button>
-
-        </form>
+          </form>
 
     </div>
   </div>

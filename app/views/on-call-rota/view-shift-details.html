@@ -1,0 +1,102 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+  View shift details
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Shift details</h2>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/on-call-rota/who-to-book" method="post">
+
+          <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+            <span class="govuk-caption-m">Date and time</span>
+            <h3 class="govuk-heading-m" style="margin-bottom: 0px;">Fri 6 March
+            </h3>
+            <p class="govuk-body" style="margin-bottom: 0px;"> 
+              Night shift (19:00 to 7:00)
+            </p>
+
+          </div>
+
+          <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+            <span class="govuk-caption-m">Team</span>
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head" style="border-bottom: 0px;">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Team member</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Roles</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">
+                    Helen Santos<br>
+                    <span class="govuk-!-font-weight-regular">07943251234</span>                
+                  </th>
+                  <td class="govuk-table__cell">Emergency response volunteer<br>Driver</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">
+                    Raheem Imri<br>
+                    <span class="govuk-!-font-weight-regular">07835213531</span>                
+                  </th>
+                  <td class="govuk-table__cell">Duty manager</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button id="red-button" style="margin-bottom: 0px; display: block;" class="govuk-button" data-module="govuk-button">
+              Book onto this shift
+            </button>
+
+          </div>
+
+          <div id="panel" class="govuk-panel govuk-panel--confirmation">
+            <span class="govuk-caption-m">Vehicle</span>
+            <h3 class="govuk-heading-m">Fiat van
+            </h3>
+            <p class="govuk-body govuk-!-font-weight-bold" id="reg-number">LJ15 EFS</p>
+            <p class="govuk-body" style="margin-bottom: 0px;"> 
+              Wellport Fire Station,<br>
+              1 Burneside Rd, Wellport WP9 4RL
+            </p>
+          </div>
+
+          <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+            <span class="govuk-caption-m">Shift type</span>
+            <h3 class="govuk-heading-m" style="margin-bottom: 0px;">On-call
+            </h3>
+
+          </div>
+
+          <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+            <span class="govuk-caption-m">Emergency response area</span>
+            <h3 class="govuk-heading-m" style="margin-bottom: 0px;">Wellport County
+            </h3>
+
+          </div>
+
+        <input type="hidden" id="phone-security" name="begin-cancel-shift" value="check">
+
+        <button id="red-button" style="margin-bottom: 0px; display: block;" class="govuk-button" data-module="govuk-button">
+          Book onto this shift
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -4,34 +4,25 @@
   Confirm rota shift
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="/home">Home</a>
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation" style="background-color: #05853A;">
-        <h1 class="govuk-panel__title">You've been added to the rota</h1>
+        <h1 class="govuk-panel__title">You've been booked onto the shift</h1>
         <div class="govuk-panel__body">
           Confirmation number<br><strong>HDJ2123F</strong>
         </div>
       </div>
 
-        <div id="panel" class="govuk-panel govuk-panel--confirmation" style="background-color: #fff; border: 1px solid #e2e2e2;">
-
-          {% include "includes/march-rota-panel.html" %}
-          <br>
-
-          {% include "includes/chosen-on-call-shifts.html" %}  
-
-        </div>
+      {% include "on-call-rota/shift-summary.html" %}
 
       <p>
         We have sent you a confirmation text message.
       </p>
+
+      <a id="red-button" class="govuk-button" data-module="govuk-button" href="/on-call-rota/calendar">Return to calendar</a>
 
     </div>
   </div>

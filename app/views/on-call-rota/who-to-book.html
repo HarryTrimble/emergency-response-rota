@@ -1,0 +1,64 @@
+{% extends "layout_signed_in.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/on-call-rota/preview-shifts" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Who do you want to book onto this shift?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="who-to-book" type="radio" value="just-me">
+                <label class="govuk-label govuk-radios__label" for="who-to-book">
+                  Myself
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="who-to-book-2" name="who-to-book" type="radio" value="someone-else">
+                <label class="govuk-label govuk-radios__label" for="who-to-book-2">
+                  Someone else
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="who-to-book-3" name="who-to-book" type="radio" value="me-and-someone-else">
+                <label class="govuk-label govuk-radios__label" for="who-to-book-3">
+                  Multiple people
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div id="panel" class="govuk-panel govuk-panel--confirmation">
+
+            <span class="govuk-caption-m">Shift-details</span>
+            <h2 class="govuk-heading-m" style="margin-bottom: 0px;">Fri 6 March
+            </h3>
+            <p class="govuk-body" style="margin-bottom: 0px;"> 
+              Night shift (19:00 to 7:00)<br>
+              On-call shift<br>
+              Wellport County
+            </p>
+            
+        </div>
+
+        <button id="red-button" class="govuk-button" data-module="govuk-button">Preview before booking</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
