@@ -1,0 +1,23 @@
+  {% extends "layout_signed_in.html" %}
+
+  {% block pageTitle %}
+    Home
+  {% endblock %}
+
+  {% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h4 class="govuk-heading-s">
+          {% include "includes/volunteer-name.html" %}
+        </h4>
+
+        <br>
+
+        {% include "includes/upcoming-shifts.html" %}
+
+      </div>
+    </div>
+
+  {% endblock %}
