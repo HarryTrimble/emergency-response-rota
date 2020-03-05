@@ -230,7 +230,7 @@ input[type=submit] {
 }
 
 #available {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #193351;
   background-color: #ffffff;
 }
 
@@ -239,9 +239,8 @@ input[type=submit] {
 }
 
 #day-taken {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #193351;
   background-color: #ffffff;
-  background-image: -webkit-linear-gradient(270deg, #f3f2f1 48%, #e2e2e2 4%, #ffffff 48%);
 }
 
 #day-taken a {
@@ -249,9 +248,8 @@ input[type=submit] {
 }
 
 #night-taken {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #193351;
   background-color: #ffffff;
-  background-image: -webkit-linear-gradient(270deg, #ffffff 48%, #e2e2e2 4%, #f3f2f1 48%);
 }
 
 #night-taken a {
@@ -259,12 +257,12 @@ input[type=submit] {
 }
 
 #both-taken {
-  border: 1px solid #e2e2e2;
-  background-color: #f3f2f1;
+  border: 1px solid #193351;
+  background-color: #193351;
 }
 
 #both-taken a {
-  color: #0b0c0c;
+  color: #ffffff;
 }
 
 // carousel
