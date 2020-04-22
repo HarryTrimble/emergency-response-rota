@@ -19,7 +19,9 @@
 {% block header %}
   {% include "includes/header_signed_in.html" %}
 {% endblock %}
-{% block footer %}{% endblock %}
+{% block footer %}
+	{% include "includes/footer.html" %}
+{% endblock %}
 
 {% block bodyEnd %}
   {% include "includes/scripts.html" %}
