@@ -262,39 +262,55 @@ input[type=submit] {
 }
 
 #available {
-  border: 1px solid #193351;
+  border: 1px solid #bbbbbb;
   background-color: #ffffff;
 }
 
 #available a {
+  text-decoration: none;
   color: #0b0c0c;
 }
 
 #day-taken {
-  border: 1px solid #193351;
-  background-color: #ffffff;
+  border: 1px solid #bbbbbb;
+  background: repeating-linear-gradient(
+    -45deg,
+    #05853a,
+    #05853a 5px,
+    #39c675 1px,
+    #39c675 6px
+  );
 }
 
 #day-taken a {
-  color: #0b0c0c;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 #night-taken {
-  border: 1px solid #193351;
-  background-color: #ffffff;
+  border: 1px solid #bbbbbb;
+  background-color: #05853a;
 }
 
 #night-taken a {
-  color: #0b0c0c;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 #both-taken {
-  border: 1px solid #193351;
-  background-color: #193351;
+  border: 1px solid #bbbbbb;
+  background: repeating-linear-gradient(
+    -45deg,
+    #fff,
+    #fff 5px,
+    #bbbbbb 1px,
+    #bbbbbb 6px
+  );
 }
 
 #both-taken a {
-  color: #ffffff;
+  text-decoration: none;
+  color: #0b0c0c;
 }
 
 // carousel
